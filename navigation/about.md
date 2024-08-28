@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Creator of Student 2025
+This is my super cool and awesome GitHub playground made by me the one and only Bailey Raz Leeder. Captain of the improv team, creator of the universe, and more.
