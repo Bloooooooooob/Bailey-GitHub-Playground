@@ -14,4 +14,4 @@ hide: true
     </tr>
 </table>
 
-My  name is sir bailey bailey. 
+Welcome to my website about chemistry. Click on any tab in the submenu to learn some chemistry puns.
