@@ -14,10 +14,11 @@ hide: true
     </tr>
 </table>
 
-<h1><strong>Welcome to my website about chemistry.</strong></h1>
+<h1>Welcome to my website about chemistry.</h1>
 
 
 
 <p> Click on any tab in the submenu to learn some chemistry puns.</p>
 
-
+<strong>bolddd</strong>
+not very bold
