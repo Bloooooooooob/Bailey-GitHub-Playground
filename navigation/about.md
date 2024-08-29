@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-This is my super cool and awesome GitHub playground made by me the one and only Bailey Raz Leeder. Captain of the improv team, junior at Del Norte High School, and lover of lasagna.
+Hi, I'm Bailey Leeder. I am a junior at Del Norte High School in the AP Computer Science Principles class and I am creating this website as a first dive into computer science.
