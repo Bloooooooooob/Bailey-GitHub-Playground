@@ -14,7 +14,7 @@ hide: true
     </tr>
 </table>
 
-<h3>Welcome to my website about chemistry.</h3>
+<h2>Welcome to my website about chemistry.</h2>
 <p> Click on any tab in the submenu to learn some chemistry puns.</p>
 
 
