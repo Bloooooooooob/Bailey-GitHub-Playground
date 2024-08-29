@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Metals
-permalink: /metals/
+permalink: /elements/metals/
 ---
 
 What did the 30th element say when someone told it to drop out of school?

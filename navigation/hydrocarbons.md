@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hydrocarbons
-permalink: /hydrocarbons/
+permalink: /molecules/hydrocarbons/
 ---
 
 What did someone say about four hydrogens and one carbon.
