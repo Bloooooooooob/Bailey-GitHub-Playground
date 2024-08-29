@@ -1,5 +1,5 @@
 ---
-layout: elements
+layout: page
 title: Elements
 permalink: /elements/
 ---
