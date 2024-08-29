@@ -12,11 +12,6 @@ permalink: /elements/
         <td><a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/elements/metaloids">Metaloids</a></td>
     </tr>
 </table>
----
-body{
-color: #0000FF;
-font-family: Ariel, sans-serif;
-font-size: 16px;
-}
----
+
+
 The elements! Click on any of the pages in the submenu above to hear puns about those specific elements.
