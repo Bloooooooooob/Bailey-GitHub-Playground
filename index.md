@@ -14,9 +14,7 @@ hide: true
     </tr>
 </table>
 
-%%html
+<h3>Welcome to my website about chemistry.</h3>
+<p> Click on any tab in the submenu to learn some chemistry puns.</p>
 
-<h3>HTML: This is a Heading</h3>
-<p>This is a paragraph.</p>
 
-Welcome to my website about chemistry. Click on any tab in the submenu to learn some chemistry puns.
