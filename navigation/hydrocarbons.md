@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: page
 title: Hydrocarbons
 permalink: /molecules/hydrocarbons/
 ---
