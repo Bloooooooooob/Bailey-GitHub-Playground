@@ -14,7 +14,7 @@ hide: true
     </tr>
 </table>
 
-<h1>Welcome to my website about chemistry.</h1>
+<h1><strong>Welcome to my website about chemistry.</strong></h1>
 
 
 
