@@ -16,7 +16,7 @@ hide: true
 
 <h1>Welcome to my website about chemistry.</h1>
 
-
+<p id="mario" class="sprite"></p>
 
 <p> Click on any tab in the submenu to learn some chemistry puns.</p>
 
