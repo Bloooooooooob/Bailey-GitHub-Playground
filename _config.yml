@@ -22,7 +22,7 @@ plugins:
 header_pages:
   - navigation/game.md
   - navigation/blog.md
-  - navigation/game.md
+  - navigation/search.md
   - navigation/about.md
   - README4YML.md
 
