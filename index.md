@@ -24,5 +24,5 @@ hide: true
 
 <div style="color: orange;">
     <p> hi </p>
-    <p style="background-color: yellow;"> hello </p>
+    <p style="background-color: white;"> hello </p>
 </div>
