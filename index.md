@@ -20,6 +20,6 @@ hide: true
 <h1 style="color: green;">Welcome to my website about chemistry.</h1>
 
 
-<p style="background-color: green;"> Click on any tab in the submenu to learn some chemistry puns.</p>
+<p style="color: green;"> Click on any tab in the submenu to learn some chemistry puns.</p>
 
 
