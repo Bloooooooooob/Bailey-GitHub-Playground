@@ -17,7 +17,7 @@ hide: true
     </tr>
 </table>
 
-<h1 style="color, green;">Welcome to my website about chemistry.</h1>
+<h1 style="color: green;">Welcome to my website about chemistry.</h1>
 
 
 <p> Click on any tab in the submenu to learn some chemistry puns.</p>
