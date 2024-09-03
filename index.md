@@ -17,9 +17,12 @@ hide: true
     </tr>
 </table>
 
-<h1 style="color: green;">Welcome to my website about chemistry.</h1>
+<div>
+    <h1 style="color: green;">Welcome to my website about chemistry.</h1>
+    <p style="color: green;"> Click on any tab in the submenu to learn some chemistry puns.</p>
+</div>
 
-
-<p style="color: green;"> Click on any tab in the submenu to learn some chemistry puns.</p>
-
-
+<div>
+    <p> hi </p>
+    <p style="color: orange;"> hello </p>
+</div>
