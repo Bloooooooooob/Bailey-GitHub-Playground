@@ -22,7 +22,7 @@ hide: true
     <p style="color: green;"> Click on any tab in the submenu to learn some chemistry puns.</p>
 </div>
 
-<div>
+<div style="color: orange;">
     <p> hi </p>
-    <p style="color: orange;"> hello </p>
+    <p> hello </p>
 </div>
