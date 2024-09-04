@@ -5,8 +5,7 @@ permalink: /elements/metals/
 ---
 
 <html lang="en">
-<head>
-    <title>Show Text on Button Click</title>
+<head> 
     <style>
         #hiddenText {
             display: none;
