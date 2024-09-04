@@ -4,8 +4,7 @@ title: Metals
 permalink: /elements/metals/
 ---
 
-<html lang="en">
-    <style>
+<style>
         #hiddenText {
             display: none;
             margin-top: 20px;
@@ -24,4 +23,3 @@ permalink: /elements/metals/
         }
     </script>
 </body>
-</html>
