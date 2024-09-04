@@ -34,3 +34,4 @@ hide: true
     <button> 92 are </button>
     <br>
     <button> 26 aren't </button>
+    <p> Click to learn more. </p>
