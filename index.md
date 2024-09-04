@@ -32,4 +32,5 @@ hide: true
 <div style="color: red;">
     <p> Not all are natural.</p>
     <button> 92 are </button>
+    <br>
     <button> 26 aren't </button>
