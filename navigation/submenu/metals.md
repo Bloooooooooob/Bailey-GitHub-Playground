@@ -7,7 +7,6 @@ permalink: /elements/metals/
 
 <i style="background-color: red;">I don't zinc that's a very good idea!</i>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
