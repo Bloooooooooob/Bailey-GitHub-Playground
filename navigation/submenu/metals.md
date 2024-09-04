@@ -5,7 +5,6 @@ permalink: /elements/metals/
 ---
 
 <html lang="en">
-<head> 
     <style>
         #hiddenText {
             display: none;
@@ -14,7 +13,6 @@ permalink: /elements/metals/
             color: green;
         }
     </style>
-</head>
 <body>
     <button onclick="showText()">What did the 30th element say when someone told it to drop out of school?</button>
 
