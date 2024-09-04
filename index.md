@@ -31,7 +31,7 @@ hide: true
 
 <div style="color: red;">
     <p> Not all are natural.</p>
-    <button style="color:green;"> 92 are </button>
+    <button style="background: green;"> 92 are </button>
     <br>
     <button> 26 aren't </button>
     <p> Click to learn more. </p>
