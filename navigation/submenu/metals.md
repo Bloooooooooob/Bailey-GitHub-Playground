@@ -20,7 +20,7 @@ permalink: /elements/metals/
 
     <script>
         function showText() {
-            document.getElementById("hiddenText").style.display = "p";
+            document.getElementById("hiddenText").style.display = "block";
         }
     </script>
 </body>
