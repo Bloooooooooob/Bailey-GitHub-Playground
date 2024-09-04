@@ -7,8 +7,6 @@ permalink: /elements/metals/
 <html lang="en">
     <style>
         #hiddenText {
-            display: none;
-            margin-top: 20px;
             font-size: 18px;
             color: green;
         }
