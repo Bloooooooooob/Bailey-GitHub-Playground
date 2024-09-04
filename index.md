@@ -33,7 +33,7 @@ hide: true
     <p> Not all are natural.</p>
     <button style="background: linear-gradient(to right, green, blue); color: white;"> 92 are </button>
     <br>
-    <button> 26 aren't </button>
+    <button style="background: linear-gradient(to right, green, green); color: white;"> 26 aren't </button>
     <p> Click to learn more. </p>
 </div>
 
