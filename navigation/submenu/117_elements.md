@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 118 Elements
-permalink: /118_elements/
+title: 117 Elements
+permalink: /117_elements/
 ---
 
 H - Hydrogen

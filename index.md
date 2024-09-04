@@ -24,16 +24,16 @@ hide: true
 
 <div style="color: green;">
     <p> There are many different elements.</p>
-    <button onclick="window.location.href='http://127.0.0.1:4100/Bailey-GitHub-Playground/118_elements/';" style="background-color: white;"> 118 Total </button>
+    <button onclick="window.location.href='http://127.0.0.1:4100/Bailey-GitHub-Playground/117_elements/';" style="background-color: white;"> 117 Total </button>
 </div>
 
 <br>
 
 <div style="color: red;">
     <p> Not all are natural.</p>
-    <button style="background: linear-gradient(to right, blue, blue); color: white;"> 92 are </button>
+    <button onclick="window.location.href='http://127.0.0.1:4100/Bailey-GitHub-Playground/90_natural/';" style="background: linear-gradient(to right, blue, blue); color: white;"> 90 are </button>
     <br>
-    <button style="background: linear-gradient(to right, green, green); color: white;"> 26 aren't </button>
+    <button onclick="window.location.href='http://127.0.0.1:4100/Bailey-GitHub-Playground/27_man-made/';" style="background: linear-gradient(to right, green, green); color: white;"> 27 aren't </button>
     <p> Click to learn more. </p>
 </div>
 
