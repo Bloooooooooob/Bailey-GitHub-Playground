@@ -3,9 +3,6 @@ layout: page
 title: Metals
 permalink: /elements/metals/
 ---
-<button>What did the 30th element say when someone told it to drop out of school?</button> 
-
-<i style="background-color: red;">I don't zinc that's a very good idea!</i>
 
 <html lang="en">
 <head>
@@ -22,9 +19,9 @@ permalink: /elements/metals/
     </style>
 </head>
 <body>
-    <button onclick="showText()">Click Me</button>
+    <button onclick="showText()">What did the 30th element say when someone told it to drop out of school?</button>
 
-    <p id="hiddenText">Hello! This text appeared after you clicked the button.</p>
+    <p id="hiddenText">Hello! I don't zinc that's a very good idea!</p>
 
     <script>
         function showText() {
