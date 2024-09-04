@@ -24,7 +24,7 @@ hide: true
 
 <div style="color: green;">
     <p> There are many different elements.</p>
-    <button onclick="window.location.href='http://127.0.0.1:4100/Bailey-GitHub-Playground/elements/';" style="background-color: white;"> 118 Total </button>
+    <button onclick="window.location.href='http://127.0.0.1:4100/Bailey-GitHub-Playground/118_elements/';" style="background-color: white;"> 118 Total </button>
 </div>
 
 <br>
