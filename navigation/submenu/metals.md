@@ -15,9 +15,9 @@ permalink: /elements/metals/
 <body>
     <button onclick="showText()">What did the 30th element say when someone told it to drop out of school?</button>
 
-    <p id="hiddenText">I don't zinc that's a very good idea!</p>
+ <p id="hiddenText">I don't zinc that's a very good idea!</p>
 
-    <script>
+ <script>
         function showText() {
             document.getElementById("hiddenText").style.display = "block";
         }
