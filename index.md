@@ -35,3 +35,6 @@ hide: true
     <br>
     <button> 26 aren't </button>
     <p> Click to learn more. </p>
+</div>
+
+<button style="background: linear-gradient(to right, red, yellow); color: white;">Gradient Button</button>
