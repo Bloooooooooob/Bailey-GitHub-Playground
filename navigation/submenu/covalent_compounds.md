@@ -13,7 +13,7 @@ permalink: /molecules/covalent_compounds/
         }
     </style>
 <body>
-    <button onclick="showText()">WWhat did water say when it finally understood a joke?</button>
+    <button onclick="showText()">What did water say when it finally understood a joke?</button>
 
  <p id="hiddenText">H2-ohhh!</p>
 
