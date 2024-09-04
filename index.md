@@ -22,7 +22,14 @@ hide: true
     <p style="color: green;"> Click on any tab in the submenu to learn some chemistry puns.</p>
 </div>
 
-<div style="color: orange;">
-    <p> hi </p>
-    <p style="background-color: white;"> hello </p>
+<div style="color: green;">
+    <p> There are many different elements.</p>
+    <button style="background-color: white;"> 118 Total </button>
 </div>
+
+<br>
+
+<div style="color: red;">
+    <p> Not all are natural.</p>
+    <button> 92 are </button>
+    <button> 26 aren't </button>
