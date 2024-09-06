@@ -10,4 +10,4 @@ Some things I love to do are theatre and improv. I'm a captain of the Del Norte 
 
 I also really love math and chemistry.
 
-<img src="/Bailey-GitHub-Playground//images/chem.png" height="60"alt=""> </img>
+<img src="/Bailey-GitHub-Playground//images/chem.png" height="60"alt=""> 
