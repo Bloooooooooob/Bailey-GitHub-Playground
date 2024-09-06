@@ -11,8 +11,8 @@ hide: true
 <table>
     <tr>
         <td><img src="/Bailey-GitHub-Playground//images/chem.png" height="60" title="Frontend" alt=""></td>
-        <td><button style="background: linear-gradient(to right, green, green); color: black;"><a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/elements/">Elements</a></button></td>
-        <td><a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/molecules/">Molecules</a></td>
+        <td><button style="background: linear-gradient(to right, green, green);"><a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/elements/">Elements</a></button></td>
+        <td><button style="background: green;"><a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/molecules/">Molecules</a></button></td>
         <td><a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/reactions/">Reactions</a></td>
     </tr>
 </table>
