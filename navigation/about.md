@@ -12,5 +12,7 @@ permalink: /about/
 🎭  I love theatre and improv. I'm a captain of the Del Norte Improv Team this year and I've been in all of the theatre shows since my freshman year. 
 
 🧪 I also really love math and chemistry.
+
 <br>
+
 <img src="/Bailey-GitHub-Playground//images/me.jpg" height="400"> 
