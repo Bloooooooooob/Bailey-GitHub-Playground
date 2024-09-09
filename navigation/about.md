@@ -19,7 +19,8 @@ permalink: /about/
 
 
 <h2>Travel</h2>
-My family loves to travel:
+
+<p>My family loves to travel:
 🇦🇺 Australia
 🇳🇿 New Zealand 
 🇮🇱 Israel
@@ -27,5 +28,5 @@ My family loves to travel:
 🇬🇧 United Kingdom
 🇲🇽 Mexico
 🇬🇹 Guatemala
-🇧🇿 Belize
+🇧🇿 Belize</p>
 <img src="/Bailey-GitHub-Playground//images/new_zealand.jpg" height="400"> 
