@@ -16,3 +16,16 @@ permalink: /about/
 <br>
 
 <img src="/Bailey-GitHub-Playground//images/me.jpg" height="400"> 
+
+
+<h2>Travel</hs>
+
+My family loves to travel:
+🇦🇺 Australia
+🇳🇿 New Zealand 
+🇮🇱 Israel
+🇪🇸 Spain
+🇬🇧 United Kingdom
+🇲🇽 Mexico
+🇬🇹 Guatemala
+🇧🇿 Belize
