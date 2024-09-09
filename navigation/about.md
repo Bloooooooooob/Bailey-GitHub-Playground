@@ -18,7 +18,7 @@ permalink: /about/
 <img src="/Bailey-GitHub-Playground//images/me.jpg" height="400"> 
 
 
-<h2>Travel</h2>
+
 
 <p>My family loves to travel:
 🇦🇺 Australia
