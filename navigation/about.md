@@ -29,3 +29,4 @@ My family loves to travel:
 🇲🇽 Mexico
 🇬🇹 Guatemala
 🇧🇿 Belize
+<img src="/Bailey-GitHub-Playground//images/new_zealand.jpg" height="400"> 
