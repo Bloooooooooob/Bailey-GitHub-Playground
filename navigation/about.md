@@ -20,7 +20,7 @@ permalink: /about/
 
 <h2>Travel</h2>
 
-<p>My family loves to travel:
+My family loves to travel:
 
 🇦🇺 Australia
 
@@ -36,6 +36,6 @@ permalink: /about/
 
 🇬🇹 Guatemala
 
-🇧🇿 Belize</p>
+🇧🇿 Belize
 
 <img src="/Bailey-GitHub-Playground//images/new_zealand.jpg" height="400"> 
