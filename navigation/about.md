@@ -19,7 +19,6 @@ permalink: /about/
 
 
 <h2>Travel</h2>
-
 My family loves to travel:
 🇦🇺 Australia
 🇳🇿 New Zealand 
