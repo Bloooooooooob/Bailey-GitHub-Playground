@@ -21,12 +21,21 @@ permalink: /about/
 <h2>Travel</h2>
 
 <p>My family loves to travel:
+
 🇦🇺 Australia
+
 🇳🇿 New Zealand 
+
 🇮🇱 Israel
+
 🇪🇸 Spain
+
 🇬🇧 United Kingdom
+
 🇲🇽 Mexico
+
 🇬🇹 Guatemala
+
 🇧🇿 Belize</p>
+
 <img src="/Bailey-GitHub-Playground//images/new_zealand.jpg" height="400"> 
