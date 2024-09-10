@@ -26,7 +26,7 @@ My family loves to travel:
 
 🇳🇿 New Zealand 
 
-🇮🇱 :is: Israel
+🇮🇱 :nz: Israel
 
 🇪🇸 Spain
 
