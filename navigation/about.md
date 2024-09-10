@@ -22,7 +22,7 @@ permalink: /about/
 
 My family loves to travel:
 
-🇦🇺 <p> &#127482; </p> Australia
+🇦🇺 Australia
 
 🇳🇿 New Zealand 
 
