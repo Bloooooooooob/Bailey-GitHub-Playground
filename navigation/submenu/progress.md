@@ -8,3 +8,4 @@ permalink: /progress/
 Create a website with various tabs in which someone can learn some jokes and information about elements in chemistry.
 
 <h3>What I accomplished</h3>
+I used skills in frontend development and SASS to change the layout 
