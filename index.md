@@ -194,7 +194,7 @@ hide: true
         <td><img src="/Bailey-GitHub-Playground//images/chem.png" height="60" title="Frontend" alt=""></td>
         <td><button style="background: linear-gradient(to right, green, green);"><a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/elements/">Elements</a></button></td>
         <td><button style="background: linear-gradient(to right, green, green);"><a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/molecules/">Molecules</a></button></td>
-        <td><button style="background: linear-gradient(to right, green, green);"><a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/reactions/">Reactions</a></button></td>
+        <td><button style="background: linear-gradient(to right, green, green);"><a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/progress/">Progress</a></button></td>
     </tr>
 </table>
 
