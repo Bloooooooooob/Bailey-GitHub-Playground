@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Progress
-permalink: /reactions/
+permalink: /progress/
 ---
 
 Things can react!
