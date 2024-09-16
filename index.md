@@ -218,3 +218,6 @@ hide: true
     <p> Click to learn more. </p>
 </div>
 
+
+
+<button onclick="window.location.href='http://127.0.0.1:4100/Bailey-GitHub-Playground/javascript_notebook/';"> Javascript Notebook </button>
