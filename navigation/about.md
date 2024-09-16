@@ -38,4 +38,9 @@ My family loves to travel:
 
 🇧🇿 Belize
 
+```python
+from emoji import emojize 
+print(emojize(":thumbs_up: Python is awesome! :grinning_face:"))
+```
+
 <img src="/Bailey-GitHub-Playground//images/new_zealand.jpg" height="400"> 
