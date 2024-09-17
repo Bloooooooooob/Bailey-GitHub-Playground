@@ -19,8 +19,29 @@ function calculate() {
     const display = document.getElementById('display');
     let expression = display.value;
 
-    // Replace sqrt( with Math.sqrt( for proper evaluation
-    expression = expression.replace(/sqrt\(/g, 'Math.sqrt(');
+    function appendSquareRoot() {
+        const display = document.getElementById('display');
+        let currentValue = display.value;
+    
+        // Ensure any existing unclosed Math.sqrt( is closed properly
+        if (currentValue.endsWith('sqrt(')) {
+            display.value += ')';
+            return;
+        }
+    
+        // Use a regular expression to capture the last number or expression
+        const match = currentValue.match(/(\d+\.?\d*)$/);
+    
+        if (match) {
+            // If there's a number, wrap it in Math.sqrt()
+            const number = match[0];
+            display.value = currentValue.replace(number, `Math.sqrt(${number})`);
+        } else {
+            // If no number, just append Math.sqrt(
+            display.value += 'Math.sqrt(';
+        }
+    }
+    
 
     try {
         // Evaluate the modified expression
