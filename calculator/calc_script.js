@@ -17,9 +17,14 @@ function deleteLast() {
 // Function to calculate the result
 function calculate() {
     const display = document.getElementById('display');
+    let expression = display.value;
+
+    // Replace sqrt( with Math.sqrt( for proper evaluation
+    expression = expression.replace(/sqrt\(/g, 'Math.sqrt(');
+
     try {
-        // Evaluate the expression in the display
-        display.value = eval(display.value);
+        // Evaluate the modified expression
+        display.value = eval(expression);
     } catch (error) {
         display.value = 'Error';
     }
