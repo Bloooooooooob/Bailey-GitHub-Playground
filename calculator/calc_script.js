@@ -24,7 +24,7 @@ function calculate() {
         let currentValue = display.value;
     
         // Ensure any existing unclosed Math.sqrt( is closed properly
-        if (currentValue.endsWith('sqrt(')) {
+        if (currentValue.beginsWith('sqrt(')) {
             display.value += ')';
             return;
         }
