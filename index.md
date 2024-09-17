@@ -218,6 +218,7 @@ hide: true
     <p> Click to learn more. </p>
 </div>
 
-<a href="calculator">Go to Calculator</a>
+<a href="calculator.html">Go to Calculator</a>
+
 
 <button onclick="window.location.href='http://127.0.0.1:4100/Bailey-GitHub-Playground/javascript_notebook/';"> Javascript Notebook </button>
