@@ -50,3 +50,22 @@ button:hover {
 button:active {
     background-color: #c8c8c8;
 }
+
+
+.history {
+    margin-top: 20px;
+}
+
+.history h2 {
+    margin: 0;
+}
+
+.history div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.history button {
+    margin-top: 10px;
+}

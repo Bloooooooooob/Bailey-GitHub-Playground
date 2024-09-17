@@ -1,3 +1,6 @@
+// Array to store calculation history
+let history = [];
+
 // Function to append a value to the display
 function appendToDisplay(value) {
     document.getElementById('display').value += value;
@@ -26,12 +29,12 @@ function appendSquareRoot() {
     }
 
     // Use a regular expression to capture the last number or expression
-    const match = currentValue.match(/(\d+\.?\d*)$/);
+    const lastNumberMatch = currentValue.match(/(\d+\.?\d*)$/);
 
-    if (match) {
+    if (lastNumberMatch) {
         // If there's a number, wrap it in Math.sqrt()
-        const number = match[0];
-        display.value = currentValue.replace(number, `Math.sqrt(${number})`);
+        const lastNumber = lastNumberMatch[0];
+        display.value = currentValue.replace(lastNumber, `Math.sqrt(${lastNumber})`);
     } else {
         // If no number, just append Math.sqrt(
         display.value += 'Math.sqrt(';
@@ -48,11 +51,33 @@ function calculate() {
     // Alternatively, use the ** operator:
     // expression = expression.replace(/(\d+\.?\d*)\^(\d+\.?\d*)/g, (match, base, exponent) => `${base} ** ${exponent}`);
 
-
     try {
         // Evaluate the expression
-        display.value = eval(expression);
+        const result = eval(expression);
+        display.value = result;
+
+        // Save the calculation to history
+        history.push({ expression, result });
+        updateHistory();
     } catch (error) {
         display.value = 'Error';
     }
+}
+
+// Function to update the history display
+function updateHistory() {
+    const historyContainer = document.getElementById('history');
+    historyContainer.innerHTML = '';
+
+    history.forEach(entry => {
+        const entryElement = document.createElement('div');
+        entryElement.textContent = `${entry.expression} = ${entry.result}`;
+        historyContainer.appendChild(entryElement);
+    });
+}
+
+// Function to clear the history
+function clearHistory() {
+    history = [];
+    updateHistory();
 }
