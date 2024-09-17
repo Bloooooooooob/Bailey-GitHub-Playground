@@ -43,6 +43,12 @@ function calculate() {
     const display = document.getElementById('display');
     let expression = display.value;
 
+    // Replace ^ with Math.pow() or ** for exponentiation
+    expression = expression.replace(/(\d+\.?\d*)\^(\d+\.?\d*)/g, (match, base, exponent) => `Math.pow(${base}, ${exponent})`);
+    // Alternatively, use the ** operator:
+    // expression = expression.replace(/(\d+\.?\d*)\^(\d+\.?\d*)/g, (match, base, exponent) => `${base} ** ${exponent}`);
+
+
     try {
         // Evaluate the expression
         display.value = eval(expression);
