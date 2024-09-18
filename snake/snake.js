@@ -20,8 +20,15 @@ let food = {
     y: Math.floor(Math.random() * canvasSize) * box
 };
 
-// Score
+// Power-up variables
+let powerUp = {
+    x: Math.floor(Math.random() * canvasSize) * box,
+    y: Math.floor(Math.random() * canvasSize) * box
+};
+
+// Score and lives
 let score = 0;
+let lives = 3;
 
 // Control snake with keyboard arrows
 document.addEventListener("keydown", controlSnake);
@@ -55,7 +62,7 @@ function drawGrid() {
     }
 }
 
-// Draw snake and food on the canvas
+// Draw the snake, food, and power-up on the canvas
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -73,6 +80,10 @@ function draw() {
     // Draw food
     ctx.fillStyle = "red";
     ctx.fillRect(food.x, food.y, box, box);
+
+    // Draw power-up
+    ctx.fillStyle = "yellow";
+    ctx.fillRect(powerUp.x, powerUp.y, box, box);
 
     // Snake movement
     let snakeX = snake[0].x;
@@ -95,6 +106,16 @@ function draw() {
         snake.pop(); // Remove the tail
     }
 
+    // Check if snake eats the power-up
+    if (snakeX === powerUp.x && snakeY === powerUp.y) {
+        lives++;
+        document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
+        powerUp = {
+            x: Math.floor(Math.random() * canvasSize) * box,
+            y: Math.floor(Math.random() * canvasSize) * box
+        };
+    }
+
     // Create new head
     let newHead = {
         x: snakeX,
@@ -103,9 +124,18 @@ function draw() {
 
     // Game over
     if (collision(newHead, snake)) {
-        clearInterval(game);
-        alert("Game Over!");
-        location.reload();
+        lives--;
+        if (lives <= 0) {
+            clearInterval(game);
+            alert("Game Over!");
+            location.reload();
+        } else {
+            // Reset snake to initial position and direction if lives remain
+            snake = [];
+            snake[0] = { x: 9 * box, y: 9 * box };
+            direction = null;
+            document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
+        }
     }
 
     snake.unshift(newHead); // Add the new head to the snake
