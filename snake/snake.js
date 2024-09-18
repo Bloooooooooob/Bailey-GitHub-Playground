@@ -9,7 +9,7 @@ canvas.height = canvasSize * box;
 
 // Snake variables
 let snake = [];
-let direction;
+let direction = null;
 let food;
 let powerUp;
 let score = 0;
@@ -113,6 +113,7 @@ function draw() {
                 clearInterval(game);
                 alert("Game Over!");
                 location.reload();
+                return; // Exit the draw function
             } else {
                 inGracePeriod = true;
                 gracePeriodEndTime = Date.now() + gracePeriodDuration;
