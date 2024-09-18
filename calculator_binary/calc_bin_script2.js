@@ -1,5 +1,5 @@
 // Number of bits (you can adjust this to have more or fewer bits)
-const numBits = 8;
+const numBits = 9;
 
 // Binary number represented as an array of bits
 let binaryArray = new Array(numBits).fill(0);
