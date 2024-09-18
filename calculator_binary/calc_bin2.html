@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Toggle Calculator</title>
+    <style>
+        .binary-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .binary-button {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            margin: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .output {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Binary Toggle Calculator</h1>
+        
+        <!-- Binary Buttons -->
+        <div class="binary-buttons" id="binaryButtons">
+            <!-- Buttons will be generated here -->
+        </div>
+
+        <!-- Output Section -->
+        <div class="output">
+            <p>Binary: <span id="binaryOutput">00000000</span></p>
+            <p>Decimal: <span id="decimalOutput">0</span></p>
+        </div>
+    </div>
+
+    <script src="calc_bin_script2.js"></script>
+</body>
+</html>
