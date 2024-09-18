@@ -63,19 +63,30 @@
         .red-controls button {
             background-color: red;
             color: white;
-            text-align: center;
         }
 
         .green-controls button {
             background-color: green;
             color: white;
-            text-align: center;
         }
 
         .blue-controls button {
             background-color: blue;
             color: white;
-            text-align: center;
+            
+        }
+        /* General container for centering buttons */
+        .button-container {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+            flex-wrap: wrap;         /* Allow buttons to wrap to the next line if needed */
+            margin: 10px 0;          /* Optional: Adds spacing between button groups */
+        }
+
+        /* To give some spacing between individual buttons */
+        .button-container button {
+            margin: 5px;
         }
 
 
