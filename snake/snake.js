@@ -9,27 +9,25 @@ canvas.height = canvasSize * box;
 
 // Snake variables
 let snake = [];
-let direction = null;
-let food;
-let specialFood;
-let score = 0;
+snake[0] = { x: 9 * box, y: 9 * box };
 
-// Initialize the game
-function initializeGame() {
-    snake = [{ x: Math.floor(canvasSize / 2) * box, y: Math.floor(canvasSize / 2) * box }];
-    direction = null;
-    food = {
-        x: Math.floor(Math.random() * canvasSize) * box,
-        y: Math.floor(Math.random() * canvasSize) * box
-    };
-    specialFood = {
-        x: -box, // Start off-screen
-        y: -box, // Start off-screen
-        active: false
-    };
-    document.getElementById("score").textContent = `Score: ${score}`;
-    placeSpecialFood(); // Schedule the special food to appear
-}
+// Initial direction
+let direction;
+
+// Food variables
+let food = {
+    x: Math.floor(Math.random() * canvasSize) * box,
+    y: Math.floor(Math.random() * canvasSize) * box
+};
+
+let specialFood = {
+    x: -box, // Start off-screen
+    y: -box, // Start off-screen
+    active: false
+};
+
+// Score
+let score = 0;
 
 // Control snake with keyboard arrows
 document.addEventListener("keydown", controlSnake);
@@ -63,7 +61,18 @@ function drawGrid() {
     }
 }
 
-// Draw the snake, food, and special food on the canvas
+// Function to place special food randomly
+function placeSpecialFood() {
+    if (Math.random() < 0.1) { // 10% chance to place special food each time
+        specialFood.x = Math.floor(Math.random() * canvasSize) * box;
+        specialFood.y = Math.floor(Math.random() * canvasSize) * box;
+        specialFood.active = true;
+    } else {
+        specialFood.active = false;
+    }
+}
+
+// Draw snake, food, and special food on the canvas
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -78,7 +87,7 @@ function draw() {
         ctx.strokeRect(snake[i].x, snake[i].y, box, box);
     }
 
-    // Draw regular food
+    // Draw food
     ctx.fillStyle = "red";
     ctx.fillRect(food.x, food.y, box, box);
 
@@ -103,13 +112,6 @@ function draw() {
         y: snakeY
     };
 
-    // Check if snake collides with itself or walls
-    if (collision(newHead, snake)) {
-        alert("Game Over!");
-        location.reload(); // Restart the game
-        return; // Exit the draw function
-    }
-
     // Check if snake eats the food
     if (snakeX === food.x && snakeY === food.y) {
         score++;
@@ -118,6 +120,7 @@ function draw() {
             x: Math.floor(Math.random() * canvasSize) * box,
             y: Math.floor(Math.random() * canvasSize) * box
         };
+        placeSpecialFood(); // Check if special food should be placed
     } else {
         snake.pop(); // Remove the tail
     }
@@ -130,18 +133,15 @@ function draw() {
         placeSpecialFood(); // Schedule the next appearance of special food
     }
 
+    // Game over
+    if (collision(newHead, snake)) {
+        clearInterval(game);
+        alert("Game Over!");
+        location.reload();
+    }
+
     snake.unshift(newHead); // Add the new head to the snake
 }
 
-// Function to place special food randomly
-function placeSpecialFood() {
-    if (Math.random() < 0.1) { // 10% chance to place special food each time
-        specialFood.x = Math.floor(Math.random() * canvasSize) * box;
-        specialFood.y = Math.floor(Math.random() * canvasSize) * box;
-        specialFood.active = true;
-    }
-}
-
 // Speed and game loop
-initializeGame(); // Initialize game state before starting the game loop
 let game = setInterval(draw, 100);
