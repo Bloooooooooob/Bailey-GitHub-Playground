@@ -76,3 +76,23 @@ function decrementByOne() {
 // Initialize the calculator
 initializeBinaryButtons();
 updateDisplay();
+
+// List of predefined colors (or you can generate them randomly)
+const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#A133FF', '#33FFD1', '#FFD133', '#D1FF33'];
+
+function initializeBinaryButtons() {
+    const binaryButtonsDiv = document.getElementById('binaryButtons');
+    binaryButtonsDiv.innerHTML = ''; // Clear any existing buttons
+
+    for (let i = 0; i < numBits; i++) {
+        const button = document.createElement('button');
+        button.classList.add('binary-button');
+        button.textContent = binaryArray[i];
+        button.dataset.index = i;
+        button.onclick = () => toggleBit(i);
+
+        // Set the background color from the colors array
+        button.style.backgroundColor = colors[i % colors.length]; // Loops through the colors array
+        binaryButtonsDiv.appendChild(button);
+    }
+}
