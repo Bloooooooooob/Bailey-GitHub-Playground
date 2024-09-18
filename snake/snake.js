@@ -9,19 +9,33 @@ canvas.height = canvasSize * box;
 
 // Snake variables
 let snake = [];
-snake[0] = { x: 9 * box, y: 9 * box };
-
-// Initial direction
-let direction;
-
-// Food variables
-let food = {
-    x: Math.floor(Math.random() * canvasSize) * box,
-    y: Math.floor(Math.random() * canvasSize) * box
-};
-
-// Score
+let direction = null;
+let food;
+let specialFood;
 let score = 0;
+let lives = 3;
+
+// Grace period variables
+let inGracePeriod = false;
+const gracePeriodDuration = 3000; // milliseconds (3 seconds)
+let gracePeriodEndTime;
+
+// Initialize the game
+function initializeGame() {
+    snake = [{ x: Math.floor(canvasSize / 2) * box, y: Math.floor(canvasSize / 2) * box }];
+    direction = null;
+    food = {
+        x: Math.floor(Math.random() * canvasSize) * box,
+        y: Math.floor(Math.random() * canvasSize) * box
+    };
+    specialFood = {
+        x: -box, // Start off-screen
+        y: -box, // Start off-screen
+        active: false
+    };
+    document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
+    placeSpecialFood(); // Schedule the special food to appear
+}
 
 // Control snake with keyboard arrows
 document.addEventListener("keydown", controlSnake);
@@ -55,7 +69,7 @@ function drawGrid() {
     }
 }
 
-// Draw snake and food on the canvas
+// Draw the snake, food, and special food on the canvas
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -70,46 +84,86 @@ function draw() {
         ctx.strokeRect(snake[i].x, snake[i].y, box, box);
     }
 
-    // Draw food
+    // Draw regular food
     ctx.fillStyle = "red";
     ctx.fillRect(food.x, food.y, box, box);
 
-    // Snake movement
-    let snakeX = snake[0].x;
-    let snakeY = snake[0].y;
+    // Draw special food
+    if (specialFood.active) {
+        ctx.fillStyle = "blue";
+        ctx.fillRect(specialFood.x, specialFood.y, box, box);
+    }
 
-    if (direction === "LEFT") snakeX -= box;
-    if (direction === "UP") snakeY -= box;
-    if (direction === "RIGHT") snakeX += box;
-    if (direction === "DOWN") snakeY += box;
+    if (!inGracePeriod) {
+        // Snake movement
+        let snakeX = snake[0].x;
+        let snakeY = snake[0].y;
 
-    // Check if snake eats the food
-    if (snakeX === food.x && snakeY === food.y) {
-        score++;
-        document.getElementById("score").textContent = `Score: ${score}`;
-        food = {
-            x: Math.floor(Math.random() * canvasSize) * box,
-            y: Math.floor(Math.random() * canvasSize) * box
+        if (direction === "LEFT") snakeX -= box;
+        if (direction === "UP") snakeY -= box;
+        if (direction === "RIGHT") snakeX += box;
+        if (direction === "DOWN") snakeY += box;
+
+        // Create new head
+        let newHead = {
+            x: snakeX,
+            y: snakeY
         };
-    } else {
-        snake.pop(); // Remove the tail
+
+        // Check if snake collides with itself or walls
+        if (collision(newHead, snake)) {
+            lives--;
+            if (lives <= 0) {
+                clearInterval(game);
+                alert("Game Over!");
+                location.reload();
+                return; // Exit the draw function
+            } else {
+                inGracePeriod = true;
+                gracePeriodEndTime = Date.now() + gracePeriodDuration;
+                initializeGame(); // Reset game state and restart at center
+                return; // Exit the draw function during grace period
+            }
+        }
+
+        // Check if snake eats the food
+        if (snakeX === food.x && snakeY === food.y) {
+            score++;
+            document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
+            food = {
+                x: Math.floor(Math.random() * canvasSize) * box,
+                y: Math.floor(Math.random() * canvasSize) * box
+            };
+        } else {
+            snake.pop(); // Remove the tail
+        }
+
+        // Check if snake eats the special food
+        if (specialFood.active && snakeX === specialFood.x && snakeY === specialFood.y) {
+            score += 2; // Special food is worth 2 points
+            document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
+            specialFood.active = false; // Deactivate special food
+            placeSpecialFood(); // Schedule the next appearance of special food
+        }
+
+        snake.unshift(newHead); // Add the new head to the snake
     }
 
-    // Create new head
-    let newHead = {
-        x: snakeX,
-        y: snakeY
-    };
-
-    // Game over
-    if (collision(newHead, snake)) {
-        clearInterval(game);
-        alert("Game Over!");
-        location.reload();
+    // Check if grace period has ended
+    if (inGracePeriod && Date.now() > gracePeriodEndTime) {
+        inGracePeriod = false;
     }
+}
 
-    snake.unshift(newHead); // Add the new head to the snake
+// Function to place special food randomly
+function placeSpecialFood() {
+    if (Math.random() < 0.1) { // 10% chance to place special food each time
+        specialFood.x = Math.floor(Math.random() * canvasSize) * box;
+        specialFood.y = Math.floor(Math.random() * canvasSize) * box;
+        specialFood.active = true;
+    }
 }
 
 // Speed and game loop
+initializeGame(); // Initialize game state before starting the game loop
 let game = setInterval(draw, 100);
