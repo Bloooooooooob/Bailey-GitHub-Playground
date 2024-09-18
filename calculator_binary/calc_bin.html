@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Calculator</title>
+    <style>
+        .calculator {
+            text-align: center;
+            margin: 20px;
+        }
+        input, button {
+            font-size: 1.2em;
+            margin: 5px;
+        }
+        .output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Binary Calculator</h1>
+        <input type="text" id="binaryInput" placeholder="Enter binary number" />
+        <br>
+        <button onclick="decrementBinary()">-1</button>
+        <button onclick="incrementBinary()">+1</button>
+        <br>
+        <div class="output">
+            <p>Decimal: <span id="decimalOutput">0</span></p>
+            <p>Binary: <span id="binaryOutput">0</span></p>
+        </div>
+    </div>
+
+    <script src="calc_bin_script.js"></script>
+</body>
+</html>
