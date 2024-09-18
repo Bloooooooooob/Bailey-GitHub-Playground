@@ -13,12 +13,6 @@ let direction = null;
 let food;
 let specialFood;
 let score = 0;
-let lives = 3;
-
-// Grace period variables
-let inGracePeriod = false;
-const gracePeriodDuration = 3000; // milliseconds (3 seconds)
-let gracePeriodEndTime;
 
 // Initialize the game
 function initializeGame() {
@@ -33,7 +27,7 @@ function initializeGame() {
         y: -box, // Start off-screen
         active: false
     };
-    document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
+    document.getElementById("score").textContent = `Score: ${score}`;
     placeSpecialFood(); // Schedule the special food to appear
 }
 
@@ -94,65 +88,49 @@ function draw() {
         ctx.fillRect(specialFood.x, specialFood.y, box, box);
     }
 
-    if (!inGracePeriod) {
-        // Snake movement
-        let snakeX = snake[0].x;
-        let snakeY = snake[0].y;
+    // Snake movement
+    let snakeX = snake[0].x;
+    let snakeY = snake[0].y;
 
-        if (direction === "LEFT") snakeX -= box;
-        if (direction === "UP") snakeY -= box;
-        if (direction === "RIGHT") snakeX += box;
-        if (direction === "DOWN") snakeY += box;
+    if (direction === "LEFT") snakeX -= box;
+    if (direction === "UP") snakeY -= box;
+    if (direction === "RIGHT") snakeX += box;
+    if (direction === "DOWN") snakeY += box;
 
-        // Create new head
-        let newHead = {
-            x: snakeX,
-            y: snakeY
+    // Create new head
+    let newHead = {
+        x: snakeX,
+        y: snakeY
+    };
+
+    // Check if snake collides with itself or walls
+    if (collision(newHead, snake)) {
+        alert("Game Over!");
+        location.reload(); // Restart the game
+        return; // Exit the draw function
+    }
+
+    // Check if snake eats the food
+    if (snakeX === food.x && snakeY === food.y) {
+        score++;
+        document.getElementById("score").textContent = `Score: ${score}`;
+        food = {
+            x: Math.floor(Math.random() * canvasSize) * box,
+            y: Math.floor(Math.random() * canvasSize) * box
         };
-
-        // Check if snake collides with itself or walls
-        if (collision(newHead, snake)) {
-            lives--;
-            if (lives <= 0) {
-                clearInterval(game);
-                alert("Game Over!");
-                location.reload();
-                return; // Exit the draw function
-            } else {
-                inGracePeriod = true;
-                gracePeriodEndTime = Date.now() + gracePeriodDuration;
-                initializeGame(); // Reset game state and restart at center
-                return; // Exit the draw function during grace period
-            }
-        }
-
-        // Check if snake eats the food
-        if (snakeX === food.x && snakeY === food.y) {
-            score++;
-            document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
-            food = {
-                x: Math.floor(Math.random() * canvasSize) * box,
-                y: Math.floor(Math.random() * canvasSize) * box
-            };
-        } else {
-            snake.pop(); // Remove the tail
-        }
-
-        // Check if snake eats the special food
-        if (specialFood.active && snakeX === specialFood.x && snakeY === specialFood.y) {
-            score += 2; // Special food is worth 2 points
-            document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
-            specialFood.active = false; // Deactivate special food
-            placeSpecialFood(); // Schedule the next appearance of special food
-        }
-
-        snake.unshift(newHead); // Add the new head to the snake
+    } else {
+        snake.pop(); // Remove the tail
     }
 
-    // Check if grace period has ended
-    if (inGracePeriod && Date.now() > gracePeriodEndTime) {
-        inGracePeriod = false;
+    // Check if snake eats the special food
+    if (specialFood.active && snakeX === specialFood.x && snakeY === specialFood.y) {
+        score += 2; // Special food is worth 2 points
+        document.getElementById("score").textContent = `Score: ${score}`;
+        specialFood.active = false; // Deactivate special food
+        placeSpecialFood(); // Schedule the next appearance of special food
     }
+
+    snake.unshift(newHead); // Add the new head to the snake
 }
 
 // Function to place special food randomly
