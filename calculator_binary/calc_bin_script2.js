@@ -38,12 +38,13 @@ function updateDisplay() {
         binaryButtons[i].textContent = binaryArray[i];
     }
 
-    // Group binary string with dividers
-    const binaryString = binaryArray.join('');
-    const groupedBinaryString = binaryString.slice(0, 8) + ' | ' + binaryString.slice(8, 16) + ' | ' + binaryString.slice(16, 24);
-    
-    // Update binary output with dividers
-    document.getElementById('binaryOutput').textContent = groupedBinaryString;
+    // Create color-coded binary strings
+    const redBits = `<span class="red-bits">${binaryArray.slice(0, 8).join('')}</span>`;
+    const greenBits = `<span class="green-bits">${binaryArray.slice(8, 16).join('')}</span>`;
+    const blueBits = `<span class="blue-bits">${binaryArray.slice(16, 24).join('')}</span>`;
+
+    // Update binary output with color-coded bits
+    document.getElementById('binaryOutput').innerHTML = `${redBits} | ${greenBits} | ${blueBits}`;
 
     // Convert the binary values to RGB
     const red = binarySliceToDecimal(0, 8);    // First 8 bits for Red
@@ -57,6 +58,7 @@ function updateDisplay() {
     // Update the color display
     document.getElementById('colorDisplay').style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
+
 
 // Increment the binary number by 1
 function incrementByOne() {
