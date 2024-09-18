@@ -130,7 +130,7 @@ function draw() {
         score += 2; // Special food is worth 2 points
         document.getElementById("score").textContent = `Score: ${score}`;
         specialFood.active = false; // Deactivate special food
-        placeSpecialFood(); // Schedule the next appearance of special food
+        
     }
 
     // Game over
