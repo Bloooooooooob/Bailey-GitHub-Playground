@@ -9,31 +9,19 @@ canvas.height = canvasSize * box;
 
 // Snake variables
 let snake = [];
-let direction = null;
-let food;
-let powerUp;
+snake[0] = { x: 9 * box, y: 9 * box };
+
+// Initial direction
+let direction;
+
+// Food variables
+let food = {
+    x: Math.floor(Math.random() * canvasSize) * box,
+    y: Math.floor(Math.random() * canvasSize) * box
+};
+
+// Score
 let score = 0;
-let lives = 3;
-
-// Grace period variables
-let inGracePeriod = false;
-const gracePeriodDuration = 3000; // milliseconds (3 seconds)
-let gracePeriodEndTime;
-
-// Initialize the game
-function initializeGame() {
-    snake = [{ x: Math.floor(canvasSize / 2) * box, y: Math.floor(canvasSize / 2) * box }];
-    direction = null;
-    food = {
-        x: Math.floor(Math.random() * canvasSize) * box,
-        y: Math.floor(Math.random() * canvasSize) * box
-    };
-    powerUp = {
-        x: Math.floor(Math.random() * canvasSize) * box,
-        y: Math.floor(Math.random() * canvasSize) * box
-    };
-    document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
-}
 
 // Control snake with keyboard arrows
 document.addEventListener("keydown", controlSnake);
@@ -67,7 +55,7 @@ function drawGrid() {
     }
 }
 
-// Draw the snake, food, and power-up on the canvas
+// Draw snake and food on the canvas
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -86,73 +74,42 @@ function draw() {
     ctx.fillStyle = "red";
     ctx.fillRect(food.x, food.y, box, box);
 
-    // Draw power-up
-    ctx.fillStyle = "yellow";
-    ctx.fillRect(powerUp.x, powerUp.y, box, box);
+    // Snake movement
+    let snakeX = snake[0].x;
+    let snakeY = snake[0].y;
 
-    if (!inGracePeriod) {
-        // Snake movement
-        let snakeX = snake[0].x;
-        let snakeY = snake[0].y;
+    if (direction === "LEFT") snakeX -= box;
+    if (direction === "UP") snakeY -= box;
+    if (direction === "RIGHT") snakeX += box;
+    if (direction === "DOWN") snakeY += box;
 
-        if (direction === "LEFT") snakeX -= box;
-        if (direction === "UP") snakeY -= box;
-        if (direction === "RIGHT") snakeX += box;
-        if (direction === "DOWN") snakeY += box;
-
-        // Create new head
-        let newHead = {
-            x: snakeX,
-            y: snakeY
+    // Check if snake eats the food
+    if (snakeX === food.x && snakeY === food.y) {
+        score++;
+        document.getElementById("score").textContent = `Score: ${score}`;
+        food = {
+            x: Math.floor(Math.random() * canvasSize) * box,
+            y: Math.floor(Math.random() * canvasSize) * box
         };
-
-        // Check if snake collides with itself or walls
-        if (collision(newHead, snake)) {
-            lives--;
-            if (lives <= 0) {
-                clearInterval(game);
-                alert("Game Over!");
-                location.reload();
-                return; // Exit the draw function
-            } else {
-                inGracePeriod = true;
-                gracePeriodEndTime = Date.now() + gracePeriodDuration;
-                initializeGame(); // Reset game state and restart at center
-                return; // Exit the draw function during grace period
-            }
-        }
-
-        // Check if snake eats the food
-        if (snakeX === food.x && snakeY === food.y) {
-            score++;
-            document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
-            food = {
-                x: Math.floor(Math.random() * canvasSize) * box,
-                y: Math.floor(Math.random() * canvasSize) * box
-            };
-        } else {
-            snake.pop(); // Remove the tail
-        }
-
-        // Check if snake eats the power-up
-        if (snakeX === powerUp.x && snakeY === powerUp.y) {
-            lives++;
-            document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
-            powerUp = {
-                x: Math.floor(Math.random() * canvasSize) * box,
-                y: Math.floor(Math.random() * canvasSize) * box
-            };
-        }
-
-        snake.unshift(newHead); // Add the new head to the snake
+    } else {
+        snake.pop(); // Remove the tail
     }
 
-    // Check if grace period has ended
-    if (inGracePeriod && Date.now() > gracePeriodEndTime) {
-        inGracePeriod = false;
+    // Create new head
+    let newHead = {
+        x: snakeX,
+        y: snakeY
+    };
+
+    // Game over
+    if (collision(newHead, snake)) {
+        clearInterval(game);
+        alert("Game Over!");
+        location.reload();
     }
+
+    snake.unshift(newHead); // Add the new head to the snake
 }
 
 // Speed and game loop
-initializeGame(); // Initialize game state before starting the game loop
 let game = setInterval(draw, 100);
