@@ -31,7 +31,6 @@ function binarySliceToDecimal(start, end) {
     return binaryArray.slice(start, end).reduce((acc, bit, index) => acc + bit * Math.pow(2, end - start - 1 - index), 0);
 }
 
-// Update the display for binary, RGB, and the color box
 function updateDisplay() {
     // Update binary buttons
     const binaryButtons = document.getElementsByClassName('binary-button');
@@ -39,9 +38,12 @@ function updateDisplay() {
         binaryButtons[i].textContent = binaryArray[i];
     }
 
-    // Update binary output
+    // Group binary string with dividers
     const binaryString = binaryArray.join('');
-    document.getElementById('binaryOutput').textContent = binaryString;
+    const groupedBinaryString = binaryString.slice(0, 8) + ' | ' + binaryString.slice(8, 16) + ' | ' + binaryString.slice(16, 24);
+    
+    // Update binary output with dividers
+    document.getElementById('binaryOutput').textContent = groupedBinaryString;
 
     // Convert the binary values to RGB
     const red = binarySliceToDecimal(0, 8);    // First 8 bits for Red
