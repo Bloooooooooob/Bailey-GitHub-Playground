@@ -100,6 +100,26 @@
             <p>RGB: <span id="rgbOutput">(0, 0, 0)</span></p>
             <div id="colorDisplay"></div> <!-- Box to display the RGB color -->
         </div>
+        <div id="controls">
+            <!-- Red Controls -->
+            <div class="color-controls red-controls">
+                <button class="red-button" onclick="incrementColor('red', 1)">+1 Red</button>
+                <button class="red-button" onclick="incrementColor('red', -1)">-1 Red</button>
+            </div>
+        
+            <!-- Green Controls -->
+            <div class="color-controls green-controls">
+                <button class="green-button" onclick="incrementColor('green', 1)">+1 Green</button>
+                <button class="green-button" onclick="incrementColor('green', -1)">-1 Green</button>
+            </div>
+        
+            <!-- Blue Controls -->
+            <div class="color-controls blue-controls">
+                <button class="blue-button" onclick="incrementColor('blue', 1)">+1 Blue</button>
+                <button class="blue-button" onclick="incrementColor('blue', -1)">-1 Blue</button>
+            </div>
+        </div>
+        
     </div>
 
     <script src="calc_bin_script2.js"></script>
