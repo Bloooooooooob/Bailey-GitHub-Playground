@@ -1,5 +1,3 @@
-// script.js
-
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -47,9 +45,22 @@ function collision(newHead, snake) {
     );
 }
 
+// Function to draw the grid
+function drawGrid() {
+    ctx.strokeStyle = "#444"; // Color for the grid lines
+    for (let i = 0; i < canvasSize; i++) {
+        for (let j = 0; j < canvasSize; j++) {
+            ctx.strokeRect(i * box, j * box, box, box);
+        }
+    }
+}
+
 // Draw snake and food on the canvas
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw the grid first
+    drawGrid();
 
     // Draw snake
     for (let i = 0; i < snake.length; i++) {
