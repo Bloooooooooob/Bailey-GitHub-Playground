@@ -38,5 +38,7 @@ hide: true
 <a href="calculator/calculator.html">Go to Calculator</a>
 <br>
 <a href="calculator_binary/calc_bin2.html">Go to Binary Calculator</a>
+<br>
+<a href="snake/snake.html">Go to Snake</a>
 
 <button onclick="window.location.href='http://127.0.0.1:4100/Bailey-GitHub-Playground/javascript_notebook/';"> Javascript Notebook </button>
