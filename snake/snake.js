@@ -15,6 +15,11 @@ let powerUp;
 let score = 0;
 let lives = 3;
 
+// Grace period variables
+let inGracePeriod = false;
+const gracePeriodDuration = 3000; // milliseconds (3 seconds)
+let gracePeriodEndTime;
+
 // Initialize the game
 function initializeGame() {
     snake = [{ x: Math.floor(canvasSize / 2) * box, y: Math.floor(canvasSize / 2) * box }];
@@ -122,19 +127,28 @@ function draw() {
         y: snakeY
     };
 
-    // Game over
-    if (collision(newHead, snake)) {
+    // Check if snake collides with itself or walls
+    if (collision(newHead, snake) && !inGracePeriod) {
         lives--;
         if (lives <= 0) {
             clearInterval(game);
             alert("Game Over!");
             location.reload();
         } else {
+            inGracePeriod = true;
+            gracePeriodEndTime = Date.now() + gracePeriodDuration;
             initializeGame(); // Reset game state and restart at center
         }
     }
 
-    snake.unshift(newHead); // Add the new head to the snake
+    // Check if grace period has ended
+    if (inGracePeriod && Date.now() > gracePeriodEndTime) {
+        inGracePeriod = false;
+    }
+
+    if (!inGracePeriod) {
+        snake.unshift(newHead); // Add the new head to the snake
+    }
 }
 
 // Speed and game loop
