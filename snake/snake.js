@@ -146,7 +146,7 @@ function draw() {
         inGracePeriod = false;
     }
 
-    if (!inGracePeriod) {
+    if (!inGracePeriod || snake.length === 1) { // Add snake to the canvas only if not in grace period or if it's the only segment
         snake.unshift(newHead); // Add the new head to the snake
     }
 }
