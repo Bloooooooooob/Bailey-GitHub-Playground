@@ -18,6 +18,10 @@
             text-align: center;
             cursor: pointer;
         }
+        .control-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
         .output {
             text-align: center;
         }
@@ -27,9 +31,15 @@
     <div class="calculator">
         <h1>Binary Toggle Calculator</h1>
         
-        <!-- Binary Buttons -->
+        <!-- Binary Toggle Buttons -->
         <div class="binary-buttons" id="binaryButtons">
             <!-- Buttons will be generated here -->
+        </div>
+
+        <!-- Increment and Decrement Buttons -->
+        <div class="control-buttons">
+            <button onclick="decrementByOne()">-1</button>
+            <button onclick="incrementByOne()">+1</button>
         </div>
 
         <!-- Output Section -->

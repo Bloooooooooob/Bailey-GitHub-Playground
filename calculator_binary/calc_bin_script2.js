@@ -30,6 +30,12 @@ function binaryToDecimal() {
     return binaryArray.reduce((acc, bit, index) => acc + bit * Math.pow(2, numBits - 1 - index), 0);
 }
 
+// Convert decimal to binary array
+function decimalToBinary(decimal) {
+    let binaryString = decimal.toString(2).padStart(numBits, '0');
+    binaryArray = Array.from(binaryString).map(Number); // Update the binary array with new values
+}
+
 // Update the display for binary and decimal output
 function updateDisplay() {
     // Update binary buttons
@@ -43,6 +49,28 @@ function updateDisplay() {
     const decimalValue = binaryToDecimal();
     document.getElementById('binaryOutput').textContent = binaryString;
     document.getElementById('decimalOutput').textContent = decimalValue;
+}
+
+// Increment the binary number by 1
+function incrementByOne() {
+    let decimalValue = binaryToDecimal();
+    decimalValue += 1; // Increment the decimal value by 1
+    if (decimalValue >= Math.pow(2, numBits)) {
+        decimalValue = Math.pow(2, numBits) - 1; // Cap to the maximum possible value for the number of bits
+    }
+    decimalToBinary(decimalValue);
+    updateDisplay();
+}
+
+// Decrement the binary number by 1
+function decrementByOne() {
+    let decimalValue = binaryToDecimal();
+    decimalValue -= 1; // Decrement the decimal value by 1
+    if (decimalValue < 0) {
+        decimalValue = 0; // Cap to 0 as the minimum value
+    }
+    decimalToBinary(decimalValue);
+    updateDisplay();
 }
 
 // Initialize the calculator
