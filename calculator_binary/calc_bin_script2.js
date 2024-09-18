@@ -4,7 +4,6 @@ const numBits = 24;
 // Binary number represented as an array of bits
 let binaryArray = new Array(numBits).fill(0);
 
-// Initialize the binary buttons
 function initializeBinaryButtons() {
     const binaryButtonsDiv = document.getElementById('binaryButtons');
     binaryButtonsDiv.innerHTML = ''; // Clear any existing buttons
@@ -16,9 +15,19 @@ function initializeBinaryButtons() {
         button.dataset.index = i;
         button.onclick = () => toggleBit(i);
 
+        // Apply different colors based on the index
+        if (i < 8) {
+            button.classList.add('red-button');   // First 8 bits for Red
+        } else if (i < 16) {
+            button.classList.add('green-button'); // Next 8 bits for Green
+        } else {
+            button.classList.add('blue-button');  // Last 8 bits for Blue
+        }
+
         binaryButtonsDiv.appendChild(button);
     }
 }
+
 
 // Toggle the bit at the given index (switch between 0 and 1)
 function toggleBit(index) {
