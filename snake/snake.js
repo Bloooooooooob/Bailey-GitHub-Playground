@@ -63,7 +63,7 @@ function drawGrid() {
 
 // Function to place special food randomly
 function placeSpecialFood() {
-    if (Math.random() < 0.1) { // 10% chance to place special food each time
+    if (Math.random() < 0.3) { // 10% chance to place special food each time
         specialFood.x = Math.floor(Math.random() * canvasSize) * box;
         specialFood.y = Math.floor(Math.random() * canvasSize) * box;
         specialFood.active = true;
