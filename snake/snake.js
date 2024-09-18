@@ -9,26 +9,26 @@ canvas.height = canvasSize * box;
 
 // Snake variables
 let snake = [];
-snake[0] = { x: 9 * box, y: 9 * box };
-
-// Initial direction
 let direction;
-
-// Food variables
-let food = {
-    x: Math.floor(Math.random() * canvasSize) * box,
-    y: Math.floor(Math.random() * canvasSize) * box
-};
-
-// Power-up variables
-let powerUp = {
-    x: Math.floor(Math.random() * canvasSize) * box,
-    y: Math.floor(Math.random() * canvasSize) * box
-};
-
-// Score and lives
+let food;
+let powerUp;
 let score = 0;
 let lives = 3;
+
+// Initialize the game
+function initializeGame() {
+    snake = [{ x: Math.floor(canvasSize / 2) * box, y: Math.floor(canvasSize / 2) * box }];
+    direction = null;
+    food = {
+        x: Math.floor(Math.random() * canvasSize) * box,
+        y: Math.floor(Math.random() * canvasSize) * box
+    };
+    powerUp = {
+        x: Math.floor(Math.random() * canvasSize) * box,
+        y: Math.floor(Math.random() * canvasSize) * box
+    };
+    document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
+}
 
 // Control snake with keyboard arrows
 document.addEventListener("keydown", controlSnake);
@@ -97,7 +97,7 @@ function draw() {
     // Check if snake eats the food
     if (snakeX === food.x && snakeY === food.y) {
         score++;
-        document.getElementById("score").textContent = `Score: ${score}`;
+        document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
         food = {
             x: Math.floor(Math.random() * canvasSize) * box,
             y: Math.floor(Math.random() * canvasSize) * box
@@ -130,11 +130,7 @@ function draw() {
             alert("Game Over!");
             location.reload();
         } else {
-            // Reset snake to initial position and direction if lives remain
-            snake = [];
-            snake[0] = { x: 9 * box, y: 9 * box };
-            direction = null;
-            document.getElementById("score").textContent = `Score: ${score} | Lives: ${lives}`;
+            initializeGame(); // Reset game state and restart at center
         }
     }
 
@@ -142,4 +138,5 @@ function draw() {
 }
 
 // Speed and game loop
+initializeGame(); // Initialize game state before starting the game loop
 let game = setInterval(draw, 100);
