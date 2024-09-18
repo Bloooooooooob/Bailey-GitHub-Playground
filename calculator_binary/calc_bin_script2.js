@@ -1,7 +1,4 @@
-// Total number of bits (8 bits each for Red, Green, and Blue)
-const numBits = 24; 
-
-// Binary number represented as an array of bits
+const numBits = 24;
 let binaryArray = new Array(numBits).fill(0);
 
 function initializeBinaryButtons() {
@@ -28,75 +25,68 @@ function initializeBinaryButtons() {
     }
 }
 
-
-// Toggle the bit at the given index (switch between 0 and 1)
 function toggleBit(index) {
     binaryArray[index] = binaryArray[index] === 0 ? 1 : 0;
     updateDisplay();
 }
 
-// Convert a binary array slice to decimal (for each color channel)
-function binarySliceToDecimal(start, end) {
-    return binaryArray.slice(start, end).reduce((acc, bit, index) => acc + bit * Math.pow(2, end - start - 1 - index), 0);
-}
-
 function updateDisplay() {
-    // Update binary buttons
     const binaryButtons = document.getElementsByClassName('binary-button');
     for (let i = 0; i < binaryButtons.length; i++) {
         binaryButtons[i].textContent = binaryArray[i];
     }
 
-    // Create color-coded binary strings
-    const redBits = `<span class="red-bits">${binaryArray.slice(0, 8).join('')}</span>`;
-    const greenBits = `<span class="green-bits">${binaryArray.slice(8, 16).join('')}</span>`;
-    const blueBits = `<span class="blue-bits">${binaryArray.slice(16, 24).join('')}</span>`;
+    const binaryString = binaryArray.join('');
+    const groupedBinaryString = binaryString.slice(0, 8) + ' | ' + binaryString.slice(8, 16) + ' | ' + binaryString.slice(16, 24);
+    document.getElementById('binaryOutput').textContent = groupedBinaryString;
 
-    // Update binary output with color-coded bits
-    document.getElementById('binaryOutput').innerHTML = `${redBits} | ${greenBits} | ${blueBits}`;
+    const red = binarySliceToDecimal(0, 8);
+    const green = binarySliceToDecimal(8, 16);
+    const blue = binarySliceToDecimal(16, 24);
 
-    // Convert the binary values to RGB
-    const red = binarySliceToDecimal(0, 8);    // First 8 bits for Red
-    const green = binarySliceToDecimal(8, 16); // Next 8 bits for Green
-    const blue = binarySliceToDecimal(16, 24); // Last 8 bits for Blue
-
-    // Update RGB output
     const rgbString = `(${red}, ${green}, ${blue})`;
     document.getElementById('rgbOutput').textContent = rgbString;
-
-    // Update the color display
     document.getElementById('colorDisplay').style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
 
+function binarySliceToDecimal(start, end) {
+    return binaryArray.slice(start, end).reduce((acc, bit, index) => acc + bit * Math.pow(2, end - start - 1 - index), 0);
+}
 
-// Increment the binary number by 1
-function incrementByOne() {
-    let decimalValue = parseInt(binaryArray.join(''), 2); // Convert binary array to decimal
-    decimalValue += 1; // Increment by 1
-    if (decimalValue >= Math.pow(2, numBits)) {
-        decimalValue = Math.pow(2, numBits) - 1; // Cap at the maximum value for 24 bits
+function incrementColor(color, increment) {
+    let start, end;
+    
+    // Define the range of bits based on the color
+    if (color === 'red') {
+        start = 0;
+        end = 8;
+    } else if (color === 'green') {
+        start = 8;
+        end = 16;
+    } else if (color === 'blue') {
+        start = 16;
+        end = 24;
     }
-    decimalToBinary(decimalValue);
+
+    // Get the current color value in decimal
+    let colorValue = binarySliceToDecimal(start, end);
+    
+    // Increment or decrement the color value
+    colorValue = Math.max(0, Math.min(255, colorValue + increment)); // Keep between 0 and 255
+
+    // Update the binary array with the new color value
+    let newBinary = decimalToBinaryArray(colorValue, 8);
+    for (let i = 0; i < 8; i++) {
+        binaryArray[start + i] = newBinary[i];
+    }
+
+    // Update the display after changing the binary array
     updateDisplay();
 }
 
-// Decrement the binary number by 1
-function decrementByOne() {
-    let decimalValue = parseInt(binaryArray.join(''), 2); // Convert binary array to decimal
-    decimalValue -= 1; // Decrement by 1
-    if (decimalValue < 0) {
-        decimalValue = 0; // Minimum value is 0
-    }
-    decimalToBinary(decimalValue);
-    updateDisplay();
+function decimalToBinaryArray(decimal, length) {
+    return decimal.toString(2).padStart(length, '0').split('').map(Number);
 }
 
-// Convert decimal number to binary array
-function decimalToBinary(decimal) {
-    let binaryString = decimal.toString(2).padStart(numBits, '0');
-    binaryArray = Array.from(binaryString).map(Number); // Update the binary array with new values
-}
-
-// Initialize the calculator
 initializeBinaryButtons();
 updateDisplay();
