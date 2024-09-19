@@ -1,6 +1,8 @@
 ---
 layout: page
 title: About
+comments: true
+toc: true
 permalink: /about/
 ---
 
