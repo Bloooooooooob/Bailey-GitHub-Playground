@@ -41,4 +41,6 @@ hide: true
 <br>
 <a href="snake/snake.html">Go to Snake</a>
 
+<hide>
 <button onclick="window.location.href='http://127.0.0.1:4100/Bailey-GitHub-Playground/javascript_notebook/';"> Javascript Notebook </button>
+</hide>
