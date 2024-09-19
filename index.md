@@ -9,9 +9,9 @@ hide: true
 <table>
     <tr>
         <td><img src="/Bailey-GitHub-Playground//images/chem.png" height="60" title="Frontend" alt=""></td>
-        <td><button style="background: linear-gradient(to right, green, green);"><a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/elements/">Elements</a></button></td>
-        <td><button style="background: linear-gradient(to right, green, green);"><a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/molecules/">Molecules</a></button></td>
-        <td><button style="background: linear-gradient(to right, green, green);"><a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/progress/">Progress</a></button></td>
+        <td><button style="background: linear-gradient(to right, green, green);"><a href="/Bailey-GitHub-Playground/elements/">Elements</a></button></td>
+        <td><button style="background: linear-gradient(to right, green, green);"><a href="/Bailey-GitHub-Playground/molecules/">Molecules</a></button></td>
+        <td><button style="background: linear-gradient(to right, green, green);"><a href="/Bailey-GitHub-Playground/progress/">Progress</a></button></td>
     </tr>
 </table>
 
@@ -22,7 +22,7 @@ hide: true
 
 <div style="color: green;">
     <p> There are many different elements.</p>
-    <button onclick="window.location.href='http://127.0.0.1:4100/Bailey-GitHub-Playground/117_elements/';" style="background-color: white;"> 117 Total </button>
+    <button onclick="window.location.href='/Bailey-GitHub-Playground/117_elements/';" style="background-color: white;"> 117 Total </button>
 </div>
 
 <br>
