@@ -26,3 +26,5 @@ header_pages:
   - navigation/about.md
   - README4YML.md
 
+exclude:
+  - myenv
