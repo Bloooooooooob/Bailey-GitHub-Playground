@@ -41,3 +41,11 @@ My family loves to travel:
 🇧🇿 Belize
 
 <img src="/Bailey-GitHub-Playground//images/new_zealand.jpg" height="400"> 
+
+<script src="https://utteranc.es/client.js"
+        repo="YourUsername/YourRepo"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
