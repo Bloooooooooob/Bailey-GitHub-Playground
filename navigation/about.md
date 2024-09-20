@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: About
 comments: true
 toc: true
