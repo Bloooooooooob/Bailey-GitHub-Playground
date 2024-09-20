@@ -41,4 +41,4 @@ hide: true
 <br>
 <a href="snake/snake.html">Go to Snake</a>
 <br>
-<a href="/cookie_clicker.html">Go to Cookie Clicker</a>
+<a href="cookie_clicker/cookie_clicker.html">Go to Cookie Clicker</a>
