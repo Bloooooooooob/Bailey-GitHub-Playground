@@ -26,6 +26,8 @@ let specialFood = {
     active: false
 };
 
+
+
 // Score
 let score = 0;
 
