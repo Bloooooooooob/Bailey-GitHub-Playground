@@ -127,7 +127,7 @@
         return new Promise(resolve => setTimeout(resolve, ms));
     }
     async function cookieClicked(){
-        var clicksound = new Audio('{{site.baseurl}}/images/click.wav');
+        var clicksound = new Audio('{{site.baseurl}}/images/click.mp3');
         clicksound.play();
         money += 1*moneyMulti
         money = Math.round(money*10)/10;
