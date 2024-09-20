@@ -13,7 +13,7 @@ permalink: /notebooks/
     </tr>
 </table>
 
-<a href="https://github.com/bloooooooooob/Bailey-GitHub-Playground/_notebooks/sprint1/linux_notebook.ipynb">View Notebook</a>
+<a href="https://bloooooooooob.github.io/Bailey-GitHub-Playground/_notebooks/sprint1/linux_notebook.ipynb">View Notebook</a>
 
 
 
