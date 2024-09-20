@@ -117,7 +117,7 @@
     var auto1Owned = 0;
     var auto2Owned = 0;
     var cps = 0;
-    var buysound = new Audio('{{site.baseurl}}/images/retro-coin.mp3');
+    var buysound = new Audio('images/retro-coin.mp3');
     var errorsound = new Audio('{{site.baseurl}}/images/error.mp3');
     var cookie = document.getElementById("cookie");
     var cookieImg = document.getElementById("cookieimg");
@@ -127,7 +127,7 @@
         return new Promise(resolve => setTimeout(resolve, ms));
     }
     async function cookieClicked(){
-        var clicksound = new Audio('{{site.baseurl}}/images/click.mp3');
+        var clicksound = new Audio('images/click.mp3');
         clicksound.play();
         money += 1*moneyMulti
         money = Math.round(money*10)/10;
