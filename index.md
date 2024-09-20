@@ -9,9 +9,9 @@ hide: true
 <table>
     <tr>
         <td><img src="/Bailey-GitHub-Playground//images/chem.png" height="60" title="Frontend" alt=""></td>
-        <td><button style="background: linear-gradient(to right, green, green);"><a href="/Bailey-GitHub-Playground/elements/">Elements</a></button></td>
-        <td><button style="background: linear-gradient(to right, green, green);"><a href="/Bailey-GitHub-Playground/molecules/">Molecules</a></button></td>
-        <td><button style="background: linear-gradient(to right, green, green);"><a href="/Bailey-GitHub-Playground/notebooks/">Notebooks</a></button></td>
+        <td><button style="background: linear-gradient(to right, green, green);"href="/Bailey-GitHub-Playground/elements/"></button></td>
+        <td><button style="background: linear-gradient(to right, green, green);" href="/Bailey-GitHub-Playground/molecules/">Molecules</a></button></td>
+        <td><button style="background: linear-gradient(to right, green, green);" href="/Bailey-GitHub-Playground/notebooks/">Notebooks</a></button></td>
     </tr>
 </table>
 
