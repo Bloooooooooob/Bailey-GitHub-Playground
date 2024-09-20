@@ -7,7 +7,7 @@ permalink: /notebooks/
 <table>
     <tr>
         <td><img src="/Bailey-GitHub-Playground//images/chem.png" height="60" title="" alt=""></td>
-        <td><a href="/Bailey-GitHub-Playground/notebooks/linux_notebook">Linux Notebook</a></td>
+        <td><a href="/Bailey-GitHub-Playground/notebooks/linux_notebook/">Linux Notebook</a></td>
         <td><a href="/Bailey-GitHub-Playground/sprint1/javascript_notebook">Javascript Notebook</a></td>
         <td><a href="/Bailey-GitHub-Playground/elements/metaloids">Python Notebook</a></td>
     </tr>
