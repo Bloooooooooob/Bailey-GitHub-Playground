@@ -40,4 +40,5 @@ hide: true
 <a href="calculator_binary/calc_bin2.html">Go to Binary Calculator</a>
 <br>
 <a href="snake/snake.html">Go to Snake</a>
+<br>
 <a href="/cookie_clicker.html">Go to Cookie Clicker</a>
