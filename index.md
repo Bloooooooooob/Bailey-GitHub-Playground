@@ -42,3 +42,5 @@ hide: true
 <a href="snake/snake.html">Go to Snake</a>
 <br>
 <a href="cookie_clicker/cookie_clicker.html">Go to Cookie Clicker</a>
+<br>
+<a href="https://nighthawkcoders.github.io/portfolio_2025/csse/javascript/fundamentals/for-loops/">JavaScript Fundamentals</a>
