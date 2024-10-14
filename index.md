@@ -12,6 +12,7 @@ hide: true
         <td><button style="background: linear-gradient(to right, green, green);"><a href="/Bailey-GitHub-Playground/elements/">Elements</a></button></td>
         <td><button style="background: linear-gradient(to right, green, green);"><a href="/Bailey-GitHub-Playground/molecules/">Molecules</a></button></td>
         <td><button style="background: linear-gradient(to right, green, green);"><a href="/Bailey-GitHub-Playground/notebooks/">Notebooks</a></button></td>
+        <td><button style="background: linear-gradient(to right, green, green);"><a href="/Bailey-GitHub-Playground/blogs/">Blogs</a></button></td>
     </tr>
 </table>
 
