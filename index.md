@@ -46,6 +46,8 @@ Progress
 <br>
 <a href="cookie_clicker/cookie_clicker.html">Go to Cookie Clicker</a>
 <br>
-Mr. Mortensen told me to add this
+Sprint 2
 <br>
 <a href="https://nighthawkcoders.github.io/portfolio_2025/csse/javascript/fundamentals/for-loops/">JavaScript Fundamentals</a>
+<a href="https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-3/p1">Lessons Taught 3.3</a>
+<a href="https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-5/p1">Lessons Taught 3.5</a>
