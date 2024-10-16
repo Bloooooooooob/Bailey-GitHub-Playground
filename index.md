@@ -40,4 +40,4 @@ hide: true
 
 <br>
 
-<a href="https://bloooooooooob.github.io/Bailey-GitHub-Playground/blog_of_blogs/">Blog of Blogs</a>
+<a href="/Bailey-GitHub-Playground/blog_of_blogs/">Blog of Blogs</a>
