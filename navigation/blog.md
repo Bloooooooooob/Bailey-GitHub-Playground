@@ -26,4 +26,18 @@ Not only did I learn about these two, but through the lessons taught by the othe
 <br>
 <a href="https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-5/p1">Lessons Taught 3.5</a>
 <br>
+<a href="https://github.com/Bloooooooooob/Bailey-GitHub-Playground/blob/main/_notebooks/sprint2/3.1_homework.ipynb">Popcorn Hacks and Homework Hacks 3.1</a>
+<br>
+<a href="https://github.com/Bloooooooooob/Bailey-GitHub-Playground/blob/main/_notebooks/sprint2/3.2_homework.ipynb">Popcorn Hacks and Homework Hacks 3.2</a>
+<br>
+<a href="https://github.com/Bloooooooooob/Bailey-GitHub-Playground/blob/main/_notebooks/sprint2/3.4_homework.ipynb">Popcorn Hacks and Homework Hacks 3.4</a>
+<br>
+<a href="https://github.com/Bloooooooooob/Bailey-GitHub-Playground/blob/main/_notebooks/sprint2/3.6_homework.ipynb">Popcorn Hacks and Homework Hacks 3.6</a>
+<br>
+<a href="https://github.com/Bloooooooooob/Bailey-GitHub-Playground/blob/main/_notebooks/sprint2/3.7_homework.ipynb">Popcorn Hacks and Homework Hacks 3.7</a>
+<br>
+<a href="https://github.com/Bloooooooooob/Bailey-GitHub-Playground/blob/main/_notebooks/sprint2/3.8_homework.ipynb">Popcorn Hacks and Homework Hacks 3.8</a>
+<br>
+<a href="https://github.com/Bloooooooooob/Bailey-GitHub-Playground/blob/main/_notebooks/sprint2/3.10_homework.ipynb">Popcorn Hacks and Homework Hacks 3.10</a>
+<br>
 <a href="https://nighthawkcoders.github.io/portfolio_2025/csse/javascript/fundamentals/for-loops/">JavaScript Fundamentals</a>
