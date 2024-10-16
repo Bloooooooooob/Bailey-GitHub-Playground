@@ -40,4 +40,4 @@ hide: true
 
 <br>
 
-<a href="https://nighthawkcoders.github.io/portfolio_2025/csp/big-idea/3-5/p1">Blog of Blogs</a>
+<a href="https://bloooooooooob.github.io/Bailey-GitHub-Playground/blog_of_blogs/">Blog of Blogs</a>
