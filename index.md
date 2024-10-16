@@ -36,16 +36,7 @@ hide: true
     <p> Click to learn more. </p>
 </div>
 
-Progress
-<br>
-<a href="calculator/calculator.html">Go to Calculator</a>
-<br>
-<a href="calculator_binary/calc_bin2.html">Go to Binary Calculator</a>
-<br>
-<a href="snake/snake.html">Go to Snake</a>
-<br>
-<a href="cookie_clicker/cookie_clicker.html">Go to Cookie Clicker</a>
-<br>
+
 Sprint 2
 <br>
 <a href="https://nighthawkcoders.github.io/portfolio_2025/csse/javascript/fundamentals/for-loops/">JavaScript Fundamentals</a>
