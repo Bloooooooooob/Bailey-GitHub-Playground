@@ -43,22 +43,22 @@ Not only did I learn about these two, but through the lessons taught by the othe
 <a href="https://nighthawkcoders.github.io/portfolio_2025/csse/javascript/fundamentals/for-loops/">JavaScript Fundamentals</a>
 <br>
 <b>Personal Reflection</b>
-1. This is why I know my units
+a. This is why I know my units
 
 I know my units because I was paying attention through all of the lessons and did the homework and popcorn hacks thoroughly.  
 
-2. This is how I build a summary in my blog that show how I know or how I will review
+b. This is how I build a summary in my blog that show how I know or how I will review
 
 I can create summaries like this that show what I learned in the last sprint and how I can improve upon my work and work ethic in future sprints
 
-3. This is how you know I am more than be perfunctory on my learning journey
+c. This is how you know I am more than be perfunctory on my learning journey
 
 I'm serious about my learning and I want to learn for the sake of becoming a better coder rather than learning the content solely for the grade. I think that coding is such a cool skill that I want to enhance more for the sake of having a wider range of knowledge beyond what I currently possess. 
 
-4. Here are some memories from my homework, learning, and teaching
+d. Here are some memories from my homework, learning, and teaching
 
 I really enjoyed teaching the class and learning from all of the other lessons. I feel like the small basis of understanding of coding concepts that I had has been advanced significantly and I remember several times where I learned a new thing that I want to make use of in a future coding projects. For instance, there were several shortcuts using lists, tuples, and sets that I never would have known on my own, and I likely would have used much longer and more convoluted methods of creating the same result.
 
-5. This is how you know my work is distinctive, unique and genuine
+e. This is how you know my work is distinctive, unique and genuine
 
 I add my own style and make sure that I'm never exactly copying something and any time I do take inspiration I make sure to add something else to it to make it my own. 
