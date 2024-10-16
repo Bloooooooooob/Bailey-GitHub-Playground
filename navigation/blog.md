@@ -43,6 +43,7 @@ Not only did I learn about these two, but through the lessons taught by the othe
 <a href="https://nighthawkcoders.github.io/portfolio_2025/csse/javascript/fundamentals/for-loops/">JavaScript Fundamentals</a>
 <br>
 <b>Personal Reflection</b>
+
 a. This is why I know my units
 
 I know my units because I was paying attention through all of the lessons and did the homework and popcorn hacks thoroughly.  
