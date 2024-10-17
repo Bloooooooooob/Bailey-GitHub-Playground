@@ -9,7 +9,7 @@ permalink: /blog_of_blogs/
 <br>
 <a href="/Bailey-GitHub-Playground/blogs/">Bailey Leeder</a>
 <br>
-<a href="-">Travis Callow</a>
+<a href="https://traviscallow.github.io/student_2025/2024/10/09/Sprint2HW_IPYNB_2_.html">Travis Callow</a>
 <br>
 <a href="-">Leon Fu</a>
 <br>
