@@ -62,4 +62,7 @@ I really enjoyed teaching the class and learning from all of the other lessons. 
 
 e. This is how you know my work is distinctive, unique and genuine
 
-I add my own style and make sure that I'm never exactly copying something and any time I do take inspiration I make sure to add something else to it to make it my own. 
+I add my own style and make sure that I'm never exactly copying something and any time I do take inspiration I make sure to add something else to it to make it my own.
+<br> 
+<a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/sprint-5-blog"> Sprint 5 </a>
+<a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/deployment-blog"> Deployment </a>
