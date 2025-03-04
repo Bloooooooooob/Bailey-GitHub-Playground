@@ -120,7 +120,7 @@ const apiUrl = `http://127.0.0.1:8887/api/student/${studentName}`;
             // Display data on the page
             const studentDataDiv = document.getElementById('student-data');
             studentDataDiv.innerHTML = `
-                <h2>${data.name}</h2>
+                <p>${data.name}</p>
                 <p><strong>Age:</strong> ${data.age}</p>
                 <p><strong>Grade:</strong> ${data.grade}</p>
                 <p><strong>Favorite Dish:</strong> ${data.favorite_dish}</p>
