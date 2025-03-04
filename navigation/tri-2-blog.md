@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sprint 5 Blog
+title: Trimester 2 Blog
 comments: true
 toc: true
 permalink: /tri-2-blog/
