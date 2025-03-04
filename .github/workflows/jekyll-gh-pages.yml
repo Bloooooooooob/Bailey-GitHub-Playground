@@ -37,7 +37,7 @@ jobs:
       - name: Execute conversion script
         run: python scripts/convert_notebooks.py
       - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v4
+        uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
