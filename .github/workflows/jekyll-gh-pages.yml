@@ -37,12 +37,12 @@ jobs:
       - name: Execute conversion script
         run: python scripts/convert_notebooks.py
       - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+        uses: actions/jekyll-build-pages@v4
         with:
           source: ./
           destination: ./_site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
 
   # Deployment job
   deploy:
