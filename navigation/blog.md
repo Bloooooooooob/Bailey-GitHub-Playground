@@ -66,3 +66,5 @@ I add my own style and make sure that I'm never exactly copying something and an
 <br> 
 <a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/sprint-5-blog"> Sprint 5 </a>
 <a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/deployment-blog"> Deployment </a>
+<br>
+<a href="http://127.0.0.1:4100/Bailey-GitHub-Playground/tri-2-blog"> Trimester 2 Blog </a>

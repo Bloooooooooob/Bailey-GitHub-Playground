@@ -27,7 +27,7 @@ permalink: /deployment-blog/
 * Select specific class
 * Go to csp.nighthawkcodingsociety.com to log in
 * Username: ubuntu
-* Password: 3 Musketeers
+* Password: Ubuntu14*&*41
 
 <h2> Application Setup </h2>
 
