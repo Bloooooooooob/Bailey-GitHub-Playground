@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Trimester 2 Blog
+title: Trimester 2 Blog CPT
 comments: true
 toc: true
-permalink: /tri-2-blog/
+permalink: /tri-2-blog-cpt/
 ---
 
 <html lang="en">
@@ -62,15 +62,33 @@ permalink: /tri-2-blog/
     </style>
 </head>
 <body>
-    <p>
-        <a href="/Bailey-GitHub-Playground/tri-2-blog-feature"> My Feature </a>
-    </p>
-    <p>
-        <a href="/Bailey-GitHub-Playground/tri-2-blog-MCQ"> College Board MCQ </a>
-    </p>
-    <p>
-        <a href="/Bailey-GitHub-Playground/tri-2-blog-CPT"> CPT Requirements </a>
-    </p>
-    <p>
-        <a href="/Bailey-GitHub-Playground/tri-2-blog-grade"> Self Grade </a>
-    </p>
+        <div class = "blog section">
+            <h2>CPT Requirements</h2>
+            <p>
+                <a href="/Bailey-GitHub-Playground/tri-2-blog"> Back </a>
+            </p>
+            <div>
+                <h3> Lists </h3>
+                <img src="/Bailey-GitHub-Playground//images/lists.png"> 
+                <p> I used lists to store a set of data together in a database. </p>
+            </div>
+            <div>
+                <h3> A Procedure </h3>
+                <img src="/Bailey-GitHub-Playground//images/procedure.png"> 
+                <p> I used procedures to define the methods of CRUD in my model. Create, Read, Update, and Delete. </p>
+            </div>
+            <div>
+                <h3> Calling a Procedure </h3>
+                <img src="/Bailey-GitHub-Playground//images/calling_procedure.png"> 
+                <p> I then called these procedures in my api to cause them to occur when needed. </p>
+            </div>
+            <div>
+                <h3> Selection </h3>
+                <img src="/Bailey-GitHub-Playground//images/selection.png"> 
+                <p> I used selection to test and see if there is a chef/student with that name in the database currently when attempting to update or delete. </p>
+            <div>
+                <h3> Iteration </h3>
+                <img src="/Bailey-GitHub-Playground//images/iteration.png"> 
+                <p> I used iteration when creating my function to read all of the data currently in the database by going through each chef/student. </p>
+            </div>
+        </div>
