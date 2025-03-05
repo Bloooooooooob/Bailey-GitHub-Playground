@@ -69,6 +69,7 @@ permalink: /tri-2-blog-feature/
         <a href="/Bailey-GitHub-Playground/tri-2-blog"> Back </a>
     </p>
     <div>
+        <img src="/Bailey-GitHub-Playground//images/about.png"> 
         <p> My feature was an about us page for the website showing who worked on it and things about each of us.</p>
     </div>
 <div class="container">
