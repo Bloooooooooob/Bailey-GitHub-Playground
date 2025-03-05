@@ -66,11 +66,11 @@ permalink: /tri-2-blog/
         <a href="/Bailey-GitHub-Playground/tri-2-blog-feature"> My Feature </a>
     </p>
     <p>
-        <a href="/Bailey-GitHub-Playground/tri-2-blog-MCQ"> College Board MCQ </a>
+        <a href="/Bailey-GitHub-Playground/tri-2-blog-mcq/"> College Board MCQ </a>
     </p>
     <p>
-        <a href="/Bailey-GitHub-Playground/tri-2-blog-CPT"> CPT Requirements </a>
+        <a href="/Bailey-GitHub-Playground/tri-2-blog-cpt/"> CPT Requirements </a>
     </p>
     <p>
-        <a href="/Bailey-GitHub-Playground/tri-2-blog-grade"> Self Grade </a>
+        <a href="/Bailey-GitHub-Playground/tri-2-blog-grade/"> Self Grade </a>
     </p>
