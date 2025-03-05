@@ -149,7 +149,7 @@ const apiUrl = `http://127.0.0.1:8887/api/student/${studentName}`;
 <div class="blog-section">
             <h3>Backend Addition to Database</h3>
             <div class="code-block">
-
+        <img src="/Bailey-GitHub-Playground//images/add.png"> 
 <pre><code class="language-python">
 #Python Code
 class _addStudent(Resource): #Function to add a student
@@ -251,7 +251,7 @@ async function addOrUpdateStudent() {
 <div class="blog-section">
             <h3>Backend Updating on Database</h3>
             <div class="code-block">
-
+        <img src="/Bailey-GitHub-Playground//images/update.png"> 
 <pre><code class="language-python">
 #Python Code
 class _Update(Resource):
@@ -318,7 +318,7 @@ async function updateChef(originalName) {
 <div class="blog-section">
             <h3>Backend Deleting from Database</h3>
             <div class="code-block">
-
+        <img src="/Bailey-GitHub-Playground//images/delete.png"> 
 <pre><code class="language-python">
 #Python Code
 class _Delete(Resource):
